@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  season: MyString
+  home_wins: 1
+  home_losses: 1
+  away_wins: 1
+  away_losses: 1
+  home_ats_wins: 1
+  home_ats_losses: 1
+  home_ats_pushes: 1
+  away_ats_wins: 1
+  away_ats_losses: 1
+  away_ats_pushes: 1
+  home_overs: 1
+  home_unders: 1
+  away_overs: 1
+  home_over_under_pushes: 1
+  away_unders: 1
+  away_over_under_pushes: 1
+
+two:
+  name: MyString
+  season: MyString
+  home_wins: 1
+  home_losses: 1
+  away_wins: 1
+  away_losses: 1
+  home_ats_wins: 1
+  home_ats_losses: 1
+  home_ats_pushes: 1
+  away_ats_wins: 1
+  away_ats_losses: 1
+  away_ats_pushes: 1
+  home_overs: 1
+  home_unders: 1
+  away_overs: 1
+  home_over_under_pushes: 1
+  away_unders: 1
+  away_over_under_pushes: 1

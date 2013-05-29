@@ -1,0 +1,57 @@
+<h1>Listing nba_teams</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Season</th>
+    <th>Home wins</th>
+    <th>Home losses</th>
+    <th>Away wins</th>
+    <th>Away losses</th>
+    <th>Home ats wins</th>
+    <th>Home ats losses</th>
+    <th>Home ats pushes</th>
+    <th>Away ats wins</th>
+    <th>Away ats losses</th>
+    <th>Away ats pushes</th>
+    <th>Home overs</th>
+    <th>Home unders</th>
+    <th>Away overs</th>
+    <th>Home over under pushes</th>
+    <th>Away unders</th>
+    <th>Away over under pushes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nba_teams.each do |nba_team| %>
+  <tr>
+    <td><%= nba_team.name %></td>
+    <td><%= nba_team.season %></td>
+    <td><%= nba_team.home_wins %></td>
+    <td><%= nba_team.home_losses %></td>
+    <td><%= nba_team.away_wins %></td>
+    <td><%= nba_team.away_losses %></td>
+    <td><%= nba_team.home_ats_wins %></td>
+    <td><%= nba_team.home_ats_losses %></td>
+    <td><%= nba_team.home_ats_pushes %></td>
+    <td><%= nba_team.away_ats_wins %></td>
+    <td><%= nba_team.away_ats_losses %></td>
+    <td><%= nba_team.away_ats_pushes %></td>
+    <td><%= nba_team.home_overs %></td>
+    <td><%= nba_team.home_unders %></td>
+    <td><%= nba_team.away_overs %></td>
+    <td><%= nba_team.home_over_under_pushes %></td>
+    <td><%= nba_team.away_unders %></td>
+    <td><%= nba_team.away_over_under_pushes %></td>
+    <td><%= link_to 'Show', nba_team %></td>
+    <td><%= link_to 'Edit', edit_nba_team_path(nba_team) %></td>
+    <td><%= link_to 'Destroy', nba_team, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nba team', new_nba_team_path %>

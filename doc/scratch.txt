@@ -1,0 +1,7 @@
+r = []
+(0..100).each{|n|
+  o = NbaGame.where("over_trend = #{n} and (home_score + away_score) > over_under").count  
+  u = NbaGame.where("over_trend = #{n} and (home_score + away_score) < over_under").count
+  r << "OU trend: #{n}%, occured(#{o+u}), Over: #{(100*o.to_f / (o + u)).round(0)}%, Under: #{(100*u.to_f / (o + u)).round(0)}%" if o > 0 || u > 0
+}
+ap r

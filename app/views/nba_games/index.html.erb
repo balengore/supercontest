@@ -1,0 +1,123 @@
+<h1>Listing nba_games</h1>
+
+<table>
+  <tr>
+    <th>Home team</th>
+    <th>Away team</th>
+    <th>Start time</th>
+    <th>Status</th>
+    <th>Date</th>
+    <th>Home Score</th>
+    <th>Away Score</th>
+    <th>Home Spread</th>
+    <th>Home Initial Spread</th>
+    <th>Over/Under</th>
+    <th>Home ATS Trend</th>
+    <th>Home ML Trend</th>
+    <th>Over Trend</th>
+    <th>Home wins</th>
+    <th>Home losses</th>
+    <th>Away wins</th>
+    <th>Away losses</th>
+<!--     <th>Home wins home</th>
+    <th>Away wins away</th>
+    <th>Home ats wins</th>
+    <th>Home ats losses</th>
+    <th>Home ats pushes</th>
+    <th>Home ats wins home</th>
+    <th>Home ats losses home</th>
+    <th>Home ats pushes home</th>
+    <th>Away ats wins</th>
+    <th>Away ats losses</th>
+    <th>Away ats pushes</th>
+    <th>Away ats wins away</th>
+    <th>Away ats losses away</th>
+    <th>Away ats pushes away</th>
+    <th>Home overs</th>
+    <th>Home unders</th>
+    <th>Home overs home</th>
+    <th>Home unders home</th>
+    <th>Away overs</th>
+    <th>Away unders</th>
+    <th>Away overs away</th>
+    <th>Away unders away</th>
+    <th>Home win streak</th>
+    <th>Home win streak home</th>
+    <th>Home over streak</th>
+    <th>Home over streak home</th>
+    <th>Away win streak</th>
+    <th>Away win streak away</th>
+    <th>Away over streak</th>
+    <th>Away over streak away</th>
+    <th>Home ats streak</th>
+    <th>Home ats streak home</th>
+    <th>Away ats streak</th>
+    <th>Away ats streak away</th> -->
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nba_games.each do |nba_game| %>
+  <tr>
+    <td><%= NbaTeam.find(nba_game.home_team_id).name %></td>
+    <td><%= NbaTeam.find(nba_game.away_team_id).name %></td>
+    <td><%= nba_game.start_time %></td>
+    <td><%= nba_game.status %></td>
+    <td><span style="white-space:nowrap"><%= nba_game.date_string %></span></td>
+    <td><%= nba_game.home_score %></td>
+    <td><%= nba_game.away_score %></td>
+    <td><%= nba_game.home_spread %></td>
+    <td><%= nba_game.home_initial_spread %></td>
+    <td><%= nba_game.over_under %></td>
+    <td><%= nba_game.home_ats_trend %></td>
+    <td><%= nba_game.home_ml_trend %></td>
+    <td><%= nba_game.over_trend %></td>
+    <td><%= nba_game.home_wins %></td>
+    <td><%= nba_game.home_losses %></td>
+    <td><%= nba_game.away_wins %></td>
+    <td><%= nba_game.away_losses %></td>
+   <!--  <td><%= nba_game.home_wins_home %></td>
+    <td><%= nba_game.away_wins_away %></td>
+    <td><%= nba_game.home_ats_wins %></td>
+    <td><%= nba_game.home_ats_losses %></td>
+    <td><%= nba_game.home_ats_pushes %></td>
+    <td><%= nba_game.home_ats_wins_home %></td>
+    <td><%= nba_game.home_ats_losses_home %></td>
+    <td><%= nba_game.home_ats_pushes_home %></td>
+    <td><%= nba_game.away_ats_wins %></td>
+    <td><%= nba_game.away_ats_losses %></td>
+    <td><%= nba_game.away_ats_pushes %></td>
+    <td><%= nba_game.away_ats_wins_away %></td>
+    <td><%= nba_game.away_ats_losses_away %></td>
+    <td><%= nba_game.away_ats_pushes_away %></td>
+    <td><%= nba_game.home_overs %></td>
+    <td><%= nba_game.home_unders %></td>
+    <td><%= nba_game.home_overs_home %></td>
+    <td><%= nba_game.home_unders_home %></td>
+    <td><%= nba_game.away_overs %></td>
+    <td><%= nba_game.away_unders %></td>
+    <td><%= nba_game.away_overs_away %></td>
+    <td><%= nba_game.away_unders_away %></td>
+    <td><%= nba_game.home_win_streak %></td>
+    <td><%= nba_game.home_win_streak_home %></td>
+    <td><%= nba_game.home_over_streak %></td>
+    <td><%= nba_game.home_over_streak_home %></td>
+    <td><%= nba_game.away_win_streak %></td>
+    <td><%= nba_game.away_win_streak_away %></td>
+    <td><%= nba_game.away_over_streak %></td>
+    <td><%= nba_game.away_over_streak_away %></td>
+    <td><%= nba_game.home_ats_streak %></td>
+    <td><%= nba_game.home_ats_streak_home %></td>
+    <td><%= nba_game.away_ats_streak %></td>
+    <td><%= nba_game.away_ats_streak_away %></td> -->
+    <td><%= link_to 'Show', nba_game %></td>
+    <td><%= link_to 'Edit', edit_nba_game_path(nba_game) %></td>
+    <td><%= link_to 'Destroy', nba_game, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nba game', new_nba_game_path %>

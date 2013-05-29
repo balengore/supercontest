@@ -1,0 +1,181 @@
+<%= form_for(@nba_game) do |f| %>
+  <% if @nba_game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nba_game.errors.count, "error") %> prohibited this nba_game from being saved:</h2>
+
+      <ul>
+      <% @nba_game.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :home_team_id %><br />
+    <%= f.number_field :home_team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :away_team_id %><br />
+    <%= f.number_field :away_team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :home_wins %><br />
+    <%= f.number_field :home_wins %>
+  </div>
+  <div class="field">
+    <%= f.label :home_losses %><br />
+    <%= f.number_field :home_losses %>
+  </div>
+  <div class="field">
+    <%= f.label :away_wins %><br />
+    <%= f.number_field :away_wins %>
+  </div>
+  <div class="field">
+    <%= f.label :away_losses %><br />
+    <%= f.number_field :away_losses %>
+  </div>
+  <div class="field">
+    <%= f.label :home_wins_home %><br />
+    <%= f.number_field :home_wins_home %>
+  </div>
+  <div class="field">
+    <%= f.label :away_wins_away %><br />
+    <%= f.number_field :away_wins_away %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_wins %><br />
+    <%= f.number_field :home_ats_wins %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_losses %><br />
+    <%= f.number_field :home_ats_losses %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_pushes %><br />
+    <%= f.number_field :home_ats_pushes %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_wins_home %><br />
+    <%= f.number_field :home_ats_wins_home %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_losses_home %><br />
+    <%= f.number_field :home_ats_losses_home %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_pushes_home %><br />
+    <%= f.text_field :home_ats_pushes_home %>
+  </div>
+  <div class="field">
+    <%= f.label :integer %><br />
+    <%= f.text_field :integer %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_wins %><br />
+    <%= f.number_field :away_ats_wins %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_losses %><br />
+    <%= f.number_field :away_ats_losses %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_pushes %><br />
+    <%= f.number_field :away_ats_pushes %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_wins_away %><br />
+    <%= f.number_field :away_ats_wins_away %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_losses_away %><br />
+    <%= f.number_field :away_ats_losses_away %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_pushes_away %><br />
+    <%= f.number_field :away_ats_pushes_away %>
+  </div>
+  <div class="field">
+    <%= f.label :home_overs %><br />
+    <%= f.number_field :home_overs %>
+  </div>
+  <div class="field">
+    <%= f.label :home_unders %><br />
+    <%= f.number_field :home_unders %>
+  </div>
+  <div class="field">
+    <%= f.label :home_overs_home %><br />
+    <%= f.number_field :home_overs_home %>
+  </div>
+  <div class="field">
+    <%= f.label :home_unders_home %><br />
+    <%= f.number_field :home_unders_home %>
+  </div>
+  <div class="field">
+    <%= f.label :away_overs %><br />
+    <%= f.number_field :away_overs %>
+  </div>
+  <div class="field">
+    <%= f.label :away_unders %><br />
+    <%= f.number_field :away_unders %>
+  </div>
+  <div class="field">
+    <%= f.label :away_overs_away %><br />
+    <%= f.number_field :away_overs_away %>
+  </div>
+  <div class="field">
+    <%= f.label :away_unders_away %><br />
+    <%= f.number_field :away_unders_away %>
+  </div>
+  <div class="field">
+    <%= f.label :home_win_streak %><br />
+    <%= f.number_field :home_win_streak %>
+  </div>
+  <div class="field">
+    <%= f.label :home_win_streak_home %><br />
+    <%= f.number_field :home_win_streak_home %>
+  </div>
+  <div class="field">
+    <%= f.label :home_over_streak %><br />
+    <%= f.number_field :home_over_streak %>
+  </div>
+  <div class="field">
+    <%= f.label :home_over_streak_home %><br />
+    <%= f.number_field :home_over_streak_home %>
+  </div>
+  <div class="field">
+    <%= f.label :away_win_streak %><br />
+    <%= f.number_field :away_win_streak %>
+  </div>
+  <div class="field">
+    <%= f.label :away_win_streak_away %><br />
+    <%= f.number_field :away_win_streak_away %>
+  </div>
+  <div class="field">
+    <%= f.label :away_over_streak %><br />
+    <%= f.number_field :away_over_streak %>
+  </div>
+  <div class="field">
+    <%= f.label :away_over_streak_away %><br />
+    <%= f.number_field :away_over_streak_away %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_streak %><br />
+    <%= f.number_field :home_ats_streak %>
+  </div>
+  <div class="field">
+    <%= f.label :home_ats_streak_home %><br />
+    <%= f.number_field :home_ats_streak_home %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_streak %><br />
+    <%= f.number_field :away_ats_streak %>
+  </div>
+  <div class="field">
+    <%= f.label :away_ats_streak_away %><br />
+    <%= f.number_field :away_ats_streak_away %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
